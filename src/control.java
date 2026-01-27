@@ -1,5 +1,5 @@
 public class control {
     public static void main(String[] args){
-        System.out.println("s");
+        play play1 = new play();
     }
 }

@@ -6,21 +6,28 @@ public class play {
     private static Scanner sc= new Scanner(System.in);
 
     public play(){
-        displaymenu();//to display menu
+
+        while (true){
+            displaymenu();
         int choice=sc.nextInt();
-        sc.nextLine();
-        switch (choice) {
-            case 1:
-                hand();
-                break;
-            case 2:
-                rules();
-                break;
-            case 3:
-                System.out.println("Exiting goodbye");
-                return;
-            default:
-                System.out.println("Invalid try again");
+
+
+            sc.nextLine();
+            //to display menu
+
+            switch (choice) {
+                case 1:
+                    hand();
+                    break;
+                case 2:
+                    rules();
+                    break;
+                case 3:
+                    System.out.println("Exiting goodbye");
+                    return;
+                default:
+                    System.out.println("Invalid try again");
+            }
         }
     }
 
@@ -63,8 +70,12 @@ public class play {
                 "\n" +
                 "======================");
     }
+    public void hand(){
+        hands player = new hands();
+        hands dealer = new hands();
+
+    }
 }
 
-public void hand(){
-    System.out.println("asd");
-}
+
+
