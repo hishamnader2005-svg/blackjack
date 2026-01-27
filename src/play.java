@@ -66,5 +66,5 @@ public class play {
 }
 
 public void hand(){
-
+    System.out.println("asd");
 }
