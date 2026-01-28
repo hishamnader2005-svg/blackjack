@@ -47,6 +47,7 @@ public class blackjack {
                 card c = deck.draw();
                 player.addcard(c);
                 player.showhand("player");
+
                 hit();
             }
             else {
