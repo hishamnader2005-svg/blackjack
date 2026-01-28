@@ -8,6 +8,7 @@ public class deck {
     public deck() {
         createDeck();
         shuffle();
+        draw();
     }
 
     public void createDeck() {
@@ -22,8 +23,8 @@ public class deck {
                 int value=0;
                 if (rank.equals("Ace")){
                     value =11;
-                };
-                if(rank.equals("King")|| rank.equals("Queen")|| rank.equals("Jack")){
+                }
+                else if (rank.equals("King")|| rank.equals("Queen")|| rank.equals("Jack")){
                     value = 10;
                 }
                 else {
@@ -36,5 +37,10 @@ public class deck {
 
     public void shuffle() {
         Collections.shuffle(cards);
+    }
+    public card draw(){
+
+        return cards.removeFirst();
+
     }
 }

@@ -71,8 +71,10 @@ public class play {
                 "======================");
     }
     public void hand(){
-        hands player = new hands();
-        hands dealer = new hands();
+
+
+        blackjack blackjack = new blackjack();
+
 
     }
 }
