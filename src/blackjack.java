@@ -20,6 +20,8 @@ public class blackjack {
         }
         else {
             System.out.println("Total is : "+ player.getvalue());
+            pause(100);
+            System.out.println("Card is "+ c);
             System.out.println("Hit or Stay");
             pause(1000);// pauses for 1000 milliseconds = 1 second
             System.out.println("1.Hit");
@@ -46,6 +48,8 @@ public class blackjack {
             card c2 = deck.draw();
             dealer.addcard(c2);
             System.out.println("Dealer total is " + dealer.getvalue());
+            pause(100);
+            System.out.println("Card is "+ c2);
             pause(1000);
 
         }
@@ -66,6 +70,7 @@ public class blackjack {
             pause(1000);
             System.out.println("----------------------------");
             System.out.println("Player hand is "+ player.getvalue());
+            pause(100);
             System.out.println("Dealer hand is "+ dealer.getvalue());
             pause(100);
             System.out.println("Player wins Congrats");
@@ -75,6 +80,7 @@ public class blackjack {
             System.out.println("----------------------------");
             pause(100);
             System.out.println("Player hand is " + player.getvalue());
+            pause(100);
             System.out.println("Dealer hand is " + dealer.getvalue());
             pause(100);
             System.out.println("Dealer wins Try again ");
