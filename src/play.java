@@ -24,7 +24,7 @@ public class play {
                     break;
                 case 3:
                     System.out.println("Exiting goodbye");
-                    return;
+                    return ;
                 default:
                     System.out.println("Invalid try again");
             }

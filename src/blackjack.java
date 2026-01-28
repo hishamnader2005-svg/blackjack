@@ -6,7 +6,9 @@ public class blackjack {
     hands player = new hands();
     hands dealer = new hands();
     deck deck= new deck();
+    play p1 = new play();
     private static Scanner sc = new Scanner (System.in);
+    int choice;
 
     public blackjack(){
         hit();
@@ -23,7 +25,7 @@ public class blackjack {
             pause(1000);// pauses for 1000 milliseconds = 1 second
             System.out.println("1.Hit");
             System.out.println("2.Stay");
-            int choice = sc.nextInt();
+            choice = sc.nextInt();
             if (choice == 1 ){
                 hit();
             }
@@ -35,14 +37,14 @@ public class blackjack {
         }
     }
 
-    public void stay (){
+    public play stay (){
         pause(1000);
 
         card c2 = deck.draw();
         dealer.addcard(c2);
 
 
-        while(dealer.getvalue() < 21 ) {
+        while(dealer.getvalue() < 21 && dealer.getvalue()< player.getvalue() ) {
             System.out.println("Dealer total is " + dealer.getvalue());
             stay();
             pause(1000);
@@ -50,17 +52,25 @@ public class blackjack {
         }
         if (dealer.getvalue() > 21) {
             pause(1000);
+            System.out.println("----------------------------");
             System.out.println("Player hand is "+ player.getvalue());
+            System.out.println("Dealer hand is "+ dealer.getvalue());
+            pause(100);
             System.out.println("Player wins Congrats");
-            return;
+            return p1;
         }
         else if (dealer.getvalue() > player.getvalue()) {
-            System.out.println("Dealer wins ");
+            System.out.println("----------------------------");
+            pause(100);
+            System.out.println("Player hand is " + player.getvalue());
+            System.out.println("Dealer hand is " + dealer.getvalue());
+            pause(100);
+            System.out.println("Dealer wins Try again ");
+            System.out.println("Want to try again press 1 :");
 
-            pause(10000);
-            return;
+            pause(1000);
         }
-
+    return p1;
     }
 
     public static void pause(int millis) {
