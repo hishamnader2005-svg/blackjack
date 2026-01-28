@@ -14,7 +14,7 @@ public class blackjack {
         card c = deck.draw();
         player.addcard(c);
         card c2 = deck.draw();
-        player.addcard(c);
+        player.addcard(c2);
         player.showhand("player");
         card c3 = deck.draw();
         dealer.addcard(c3);
@@ -33,9 +33,7 @@ public class blackjack {
 
             System.out.println("Total is : "+ player.getvalue());
             pause(100);
-            card c = deck.draw();
-            player.addcard(c);
-            player.showhand("player");
+
 
             if (player.getvalue()> 21 ){
                 return;
@@ -46,8 +44,9 @@ public class blackjack {
             System.out.println("2.Stay");
             choice = sc.nextInt();
             if (choice == 1 ){
-
-
+                card c = deck.draw();
+                player.addcard(c);
+                player.showhand("player");
                 hit();
             }
             else {
