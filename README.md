@@ -24,7 +24,7 @@ using standard dealer vs player rules
 - dealer draws cards until he beats u or he busts
 - closest to 21 wins
 
-## project dtructure 
+## project structure 
 - control.java - starts the game
 - deck.java -creates deck and shuffles cards
 - cards.java - represents a playing card
